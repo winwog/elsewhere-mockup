@@ -1,26 +1,49 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* neutral page canvas (behind the phone frame on desktop) */
+  --color-canvas: #d9d9d9;
+
+  /* Elsewhere wireframe greyscale */
+  --color-cream: #ffffff;
+  --color-espresso: #1a1a1a;
+  --color-terracotta: #404040;
+  --color-terracotta-dark: #1a1a1a;
+  --color-latte: #ececec;
+
+  /* tier shades (dark = higher tier) */
+  --color-tier-bronze: #999999;
+  --color-tier-silver: #737373;
+  --color-tier-gold: #4d4d4d;
+  --color-tier-platinum: #1a1a1a;
+
+  /* LINE chrome (chat screen only) */
+  --color-line-bg: #ececec;
+  --color-line-green: #404040;
+
+  /* rich menu accent — sets it apart from the grey chat log above it */
+  --color-accent: #dceaf7;
+  --color-accent-ink: #2f5d8a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-canvas: var(--color-canvas);
+  --color-cream: var(--color-cream);
+  --color-espresso: var(--color-espresso);
+  --color-terracotta: var(--color-terracotta);
+  --color-terracotta-dark: var(--color-terracotta-dark);
+  --color-latte: var(--color-latte);
+  --color-tier-bronze: var(--color-tier-bronze);
+  --color-tier-silver: var(--color-tier-silver);
+  --color-tier-gold: var(--color-tier-gold);
+  --color-tier-platinum: var(--color-tier-platinum);
+  --color-line-bg: var(--color-line-bg);
+  --color-line-green: var(--color-line-green);
+  --color-accent: var(--color-accent);
+  --color-accent-ink: var(--color-accent-ink);
+  --font-sans: var(--font-ibm-plex-sans-thai);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-ibm-plex-sans-thai), sans-serif;
 }
